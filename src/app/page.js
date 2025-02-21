@@ -26,7 +26,7 @@ export default function Home() {
         try {
             setError(null);
             const parsedInput = JSON.parse(inputData);
-            const res = await axios.post("http://localhost:3001/bfhl", parsedInput);
+            const res = await axios.post("https://bajaj-finser-backend.onrender.com/bfhl", parsedInput);
             setResponse(res.data);
         } catch (err) {
             setError("Failed to fetch response");
